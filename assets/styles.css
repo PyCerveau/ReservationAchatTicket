@@ -1,0 +1,151 @@
+/* Reset de base */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #f1f0f2, #030303);
+    color: white;
+    padding: 15px 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+nav ul li::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #ffcc00;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+nav ul li:hover::after {
+    width: 100%;
+}
+
+/* Section principale (image de fond entre header et footer) */
+.main-content {
+    flex: 1;
+    background-image: url('../img/car3.jpg'); /* Utilise l'image que tu souhaites en fond */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    height: 100%;
+}
+
+.background-image {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+button.btn.orange {
+    background: linear-gradient(135deg, #eeecef, #090909);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+button.btn.orange:hover {
+    background: linear-gradient(135deg, #eeecef, #090909);
+    transform: scale(1.1);
+    box-shadow: 0px 4px 10px rgba(255, 102, 0, 0.5);
+}
+/* Footer */
+footer {
+    background-color: #f9f8f8;
+    color: rgb(4, 4, 4);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    font-size: 1.2em;
+    margin-top: auto; /* Assure que le footer reste en bas */
+}
+
+/* Logos à gauche */
+.social-links {
+    display: flex;
+    align-items: center;
+}
+
+.social-links img {
+    width: 50px;
+    margin-right: 15px; /* Espacement entre les icônes */
+}
+
+/* Texte à droite */
+footer p {
+    margin: 0;
+    text-align: left;
+}
+
+
